@@ -1,0 +1,89 @@
+{
+    "gitbook": ">= 3.2.2",
+    "title": "PX4 Developer Guide",
+    "variables": {
+        "logo": "./assets/site/logo_pro_small.png",
+        "px4_version": "master"
+    },
+    "plugins": [
+        "youtube",
+        "richquotes@git+https://github.com/Dronecode/gitbook-plugin-richquotes.git",
+        "collapsible-menu",
+        "anchors",
+        "page-toc-button",
+        "ga",
+        "language-picker",
+        "custom-favicon",
+        "bulk-redirect@git+https://github.com/Dronecode/gitbook-plugin-bulk-redirect.git",
+        "redirect",
+        "toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git",
+        "validate-links",
+        "versions-select@git+https://github.com/Dronecode/gitbook-plugin-versions-select.git",
+        "mathjax@git+https://github.com/Dronecode/plugin-mathjax.git#update_cdn",
+        "-mermaid",
+        "-stub-out-blocks@git+https://github.com/hamishwillee/gitbook-plugin-stub-out-blocks.git",
+        "theme-dronecode@git+https://github.com/dronecode/theme-dronecode.git"
+
+    ],
+    "pluginsConfig":
+    {
+
+        "richquotes":
+        {
+            "tip": {
+                "alert": "success",
+                "picto": "fa-thumbs-o-up"
+            }
+
+        },
+        "ga": {
+            "token": "UA-33658859-3"
+        },
+        "favicon": "favicon.ico",
+        "bulk-redirect": {
+            "basepath": "/",
+            "redirectsFile": "redirects.json"
+        },
+        "toolbar": {
+            "buttons":
+            [
+                {
+                    "label": "Bug tracker",
+                    "icon": "fa fa-bug",
+                    "position" : "left",
+                    "url": "https://github.com/PX4/PX4-user_guide/issues/new?title=DeveloperBug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"
+                    
+                },
+                {
+                    "label": "GitHub",
+                    "icon": "fa fa-github",
+                    "url": "https://github.com/PX4/Devguide"
+                }
+            ]
+        },
+        
+        "versions": {
+            "gitbookConfigURL": "https://raw.githubusercontent.com/PX4/Devguide/master/book.json",
+            "options": [
+                {
+                    "value": "https://docs.px4.io/master/en/development/development.html",
+                    "text": "master"
+                },
+                {
+                    "value": "https://dev.px4.io/v1.11_noredirect/en/",
+                    "text": "1.11 - stable"
+                },
+                {
+                    "value": "https://dev.px4.io/v1.10_noredirect/en/",
+                    "text": "1.10"
+                },
+                {
+                    "value": "https://dev.px4.io/v1.9.0_noredirect/en/",
+                    "text": "1.9 "
+                }
+				
+            ]
+        }
+        
+    }
+}
